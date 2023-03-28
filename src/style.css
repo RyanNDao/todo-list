@@ -1,0 +1,60 @@
+body{
+    height: 100vh;
+    background-image: url(./images/calm.jpg);
+    background-repeat: no-repeat; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+
+.main-container{
+    height: 85%;
+    width: 67%;
+    background-color: rgba(248, 230, 230, 0.98);
+    border-radius: 5px;
+    box-shadow: 3px 6px 10px black;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.projects-tab{
+    background-color: lightgray;
+    display: grid;
+    grid-template-rows: 75px repeat(5, 50px);
+    grid-auto-rows: 50px;
+    gap: 20px;
+    border: 2px solid grey;
+}
+
+.project-row-container{
+    padding: 10px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    background-color: whitesmoke;
+    box-shadow: 1px 1px 3px black;
+    align-self: center;
+}
+
+.project-tab-title{
+    color: darkgoldenrod;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+}
+
+.tasks-container{
+    display: flex;
+    padding: 25px;
+    flex-direction: column;
+}
+
+.project-header{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: plum;
+    margin: 0px;
+}
