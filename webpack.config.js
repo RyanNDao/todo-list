@@ -10,6 +10,7 @@ module.exports = {
         task_items: './src/task_items.js',
         project_items: './src/project_items.js',
         dom: './src/dom.js',
+        utilities: './src/utilities.js'
     },
     output: {
         filename: '[name].js',

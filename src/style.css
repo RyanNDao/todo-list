@@ -10,8 +10,8 @@ body{
 
 
 .main-container{
-    height: 85%;
-    width: 67%;
+    height: 85vh;
+    width: 67vw;
     background-color: rgba(248, 230, 230, 0.98);
     border-radius: 5px;
     box-shadow: 3px 6px 10px black;
@@ -19,13 +19,37 @@ body{
     grid-template-columns: 1fr 3fr;
 }
 
+.empty-project{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    color: red;
+    text-align: center;
+}
+
 .projects-tab{
     background-color: lightgray;
-    display: grid;
-    grid-template-rows: 75px repeat(5, 50px);
-    grid-auto-rows: 50px;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
     border: 2px solid grey;
+    background-color:rgba(134, 145, 245, 0.199);
+    overflow-y: auto;
+}
+
+.add-new-button{
+    border-radius: 50%;
+    background-color: grey;
+    font-size: 2rem;
+    font-weight: bold;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto 10px 10px auto;
+    cursor: pointer;
 }
 
 .project-row-container{
@@ -35,6 +59,7 @@ body{
     background-color: whitesmoke;
     box-shadow: 1px 1px 3px black;
     align-self: center;
+    width: 100%;
 }
 
 .project-tab-title{
@@ -43,12 +68,16 @@ body{
     justify-content: center;
     align-items: center;
     margin: 0px;
+    border-bottom: 3px solid grey;
+    background-color:rgba(162, 170, 248, 0.473);
+    height: 75px;
 }
 
 .tasks-container{
     display: flex;
     padding: 25px;
     flex-direction: column;
+    gap: 5px;
 }
 
 .project-header{
@@ -58,3 +87,175 @@ body{
     color: plum;
     margin: 0px;
 }
+
+.task-button{
+    height: 15px;
+    box-shadow: 1px 1px 1px black;
+}
+
+.task-button.checked{
+    background-image: url(./images/x.png);
+    background-size: contain;
+    box-shadow: 0px 0px 0px black;
+}
+
+.task-completed .task-title-container span{
+    text-decoration: line-through;
+}
+
+.task-title-container .task-title{
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.task-due-date{
+    color: rgba(128, 122, 122, 0.747);
+    font-size: .75rem;
+    margin-right: auto;
+    margin-left: 10px;
+}
+
+.task-row{
+    display: flex;
+    gap: 10px;
+}
+
+.task-container{
+    display: flex;
+    flex-direction: column;
+    flex-grow : 1;
+    border: 2px solid grey;
+    padding: 4px;
+}
+
+.task-title-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.dropdown-button-container{
+    color: red;
+    cursor: pointer;
+    font-size: 1.25rem;
+    font-weight: bolder;
+    width: 11px;
+    text-align: center
+}
+
+.dropdown-container.open{
+    font-size: .8rem;
+    color: darkgray;
+    padding: 4px 0px 4px 12px;
+}
+
+
+
+.dropdown-container.open p{
+    margin: 3px 0px;
+}
+
+.dropdown-container.closed{
+    display: none;
+}
+
+.task-editor-container{
+    height: 60vh;
+    width: 36vw;
+    background-color: rgba(44, 34, 179, 0.973);
+    box-shadow: 1px 1px 3px black;
+    position: absolute;
+    top: 20%;
+    left: 32%;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.overlay{
+    height: 100vh;
+    width: 100vw;
+    z-index: 2;
+    background-color:rgba(0, 0, 0, 0.185);
+    position: absolute;
+    backdrop-filter: blur(5px);
+}
+
+.task-editor-header{
+    font-size: 2rem;
+    margin: 5px 0px 30px 0px;
+    color: rgba(240, 27, 27, 0.952);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+span.task-editor-close{
+    color: black;
+    cursor: pointer;
+    position: absolute;
+    right: 3%;
+    top: 3%;
+    font-size: 1.75rem;
+}
+
+
+.task-editor-form{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    height: 100%;
+}
+
+.delete-task{
+    position: absolute;
+    bottom: 3%;
+    left: 3%;
+    width: 90px;
+    height: 35px;
+    color: red;
+    font-weight: bold;
+}
+
+.form-input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.form-input > input{
+    width: 80%;
+    border-radius: 3px;
+}
+
+.form-input > label{
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: rgba(255, 0, 0, 0.781);
+}
+
+.form-input > textarea{
+    height: 150px;
+    width: 80%;
+}
+
+.form-submit{
+    width: 35%;
+    height: 35px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: auto;
+    align-self: center;
+}
+
+.priority-div{
+    display: flex;
+    justify-content: space-around;
+    color: rgba(255, 0, 0, 0.781);
+    font-size: 2rem;
+    align-items: center;
+    font-weight: bold;
+}
+
